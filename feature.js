@@ -11,7 +11,7 @@
 // @grant        none
 // ==/UserScript==
 
-var activeGif = function() {
+var activeImage = function() {
     var flagClass = 'gua-image-activated';
     $('a').filter(function() {
         var href = $(this).attr('href');
@@ -31,6 +31,17 @@ var activeGif = function() {
     });
 };
 
-$(document).ajaxSuccess(function(event, xhr, settings) {
-    activeGif();
+var hookXHRLoad = function(callback) {
+    var open = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function() {
+        this.addEventListener('load', function() {
+            callback();
+        });
+        open.apply(this, arguments);
+    };
+};
+
+hookXHRLoad(function(xhr) {
+    console.log('global hook');
+    activeImage();
 });

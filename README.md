@@ -25,3 +25,9 @@ clone 项目或者下载 zip 文件解压 https://github.com/guaxiao/GZH/release
 将之前解压的文件夹拖入 chrome 即可
 
 <img src='http://static.gmgard.com/smiley/xsk.gif' />
+
+更新说明
+===
+
+- 1.2 修复插件在专栏中无法生效的问题
+- 1.1 删除链接文本
