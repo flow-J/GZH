@@ -2,7 +2,7 @@ var activeGif = function() {
     var flagClass = 'gua-image-activated';
     $('a').filter(function() {
         var href = $(this).attr('href');
-        var validImage = href && href.endsWith('.gif') && href.endsWith('.jpg') && href.endsWith('.png');
+        var validImage = href && (href.endsWith('.gif') || href.endsWith('.jpg') || href.endsWith('.png'));
         return validImage;
     }).filter(function() {
         var notLoaded = !$(this).hasClass(flagClass);
