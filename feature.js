@@ -13,7 +13,8 @@ var activeGif = function() {
         var url = decodeURIComponent(href.split('?target=')[1]);
         self.addClass(flagClass);
         // console.log(url);
-        self.after($('<img>').attr('src', url));
+        self.empty();
+        self.append($('<img>').attr('src', url));
     });
 };
 
