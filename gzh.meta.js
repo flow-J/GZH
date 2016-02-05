@@ -6,7 +6,6 @@
 // @author       guaxiao
 // @include      *://*.zhihu.com/*
 // @include      *://zhihu.com/*
-// @require      http://libs.cdnjs.net/jquery/2.1.1/jquery.min.js
 // @updateURL    https://raw.githubusercontent.com/guaxiao/GZH/master/gzh.meta.js
 // @downloadURL  https://raw.githubusercontent.com/guaxiao/GZH/master/feature.js
 // @grant        none
