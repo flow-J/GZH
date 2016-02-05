@@ -18,8 +18,10 @@ var activeImage = function() {
         var validImage = href && (href.endsWith('.gif') || href.endsWith('.jpg') || href.endsWith('.png'));
         return validImage;
     }).filter(function() {
-        var notLoaded = !$(this).hasClass(flagClass);
-        return notLoaded;
+        var self = $(this);
+        var notLoaded = !self.hasClass(flagClass);
+        var uneditable = !self.data('editable');
+        return notLoaded && uneditable;
     }).each(function(){
         var self = $(this);
         var href = self.attr('href');
@@ -42,6 +44,5 @@ var hookXHRLoad = function(callback) {
 };
 
 hookXHRLoad(function(xhr) {
-    console.log('global hook');
     activeImage();
 });
