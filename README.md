@@ -1,6 +1,10 @@
 # GZH
 Gif for zhihu.com as new year gift
 
+效果
+===
+<img src='https://raw.githubusercontent.com/guaxiao/GZH/master/zhihu23.gif' />
+
 说明
 ===
 本软件为 chrome 插件，可以将知乎页面上的所有图片链接（例如 https://raw.githubusercontent.com/guaxiao/GZH/master/setting.png
