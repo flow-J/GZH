@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "gzh.gif",
+  "description": "animation",
+  "version": "1.0",
+  "content_scripts": [{
+      "matches": ["*://*.zhihu.com/*"],
+      // "css": ["common.css"],
+      "js": ["jquery-2.1.4.min.js", "feature.js", "gzh.js"],
+      "run_at": "document_start"
+    }
+  ],
+  // "browser_action": {
+  //   "default_icon": "icon.png",
+  //   "default_popup": "popup.html"
+  // },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "*://*.zhihu.com/*",
+    "https://ajax.googleapis.com/"
+  ],
+  "web_accessible_resources": [
+    "*.css",
+    "*.js"
+  ]
+}
